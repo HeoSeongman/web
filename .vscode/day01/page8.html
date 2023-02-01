@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>양식 입력 페이지</title>
+  <style>
+    tr {
+      text-align: center;
+    }
+    td {
+      padding: 2px 30px;
+    }
+  </style>
+</head>
+<body>
+  <table border="1" bordercolor="aqua">
+    <tr style="background-color: lightgreen;">
+      <td>항목</td>
+      <td>입력</td>
+    </tr>
+    <tr>
+      <td>번호</td>
+      <td style="background-color: lightpink;">1</td>
+    </tr>
+    <tr>
+      <td>제목</td>
+      <td style="background-color: yellow;"><input type="text" placeholder="제목을 입력하세요."/></td>
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td style="background-color: yellow;"><textarea cols="30" rows="10" placeholder="내용을 입력하세요."></textarea></td>
+    </tr>
+    <tr>
+      <td>작성자</td>
+      <td style="background-color: yellow;"><input type="text" placeholder="작성자를 입력하세요"></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="align-items: center; background-color: yellow;">
+        <button>글쓰기 완료</button>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+  background-color: deepskyblue;
+}
+
+a {
+  text-decoration: none;
+  color: cornsilk;
+  transition: .6s;
+}
+
+a:hover {
+  color: deepskyblue;
+}

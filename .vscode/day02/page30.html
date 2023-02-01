@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page10</title>
+  <style>
+    body {
+      height: 3000px;
+      background-color: pink;
+    }
+
+    li {
+      list-style-type: none;
+      float: left;
+      padding: 15px;
+      width: 70px;
+      height: 20px;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    li:nth-child(2n) {
+      background-color: orange;
+    }
+
+    li:nth-child(2n+1) {
+      background-color: yellow;
+    }
+    
+    a {
+      text-decoration: none;
+      color: red;
+    }
+
+    div {
+      font-size: 15px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    #top {
+      height: 100px;
+      background-color: lime;
+      padding: 2px;
+      position: relative;
+    }
+
+    #top2 {
+      background-color: black;
+      color: yellow;
+      border-radius: 100px 10px;
+      width: 250px;
+      height: 100px;
+      /* position: absolute; */
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      border: 20px solid blue;
+      font-size: 30px;
+    }
+
+    #total {
+      width: 800px;
+      background-color: lightcyan;
+      text-align: center;
+    }
+
+    #center {
+      padding: 30px;
+      align-content: center;
+      vertical-align: middle;
+    }
+
+    #center > * {
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 0 10px;
+      line-height: 30px;
+    }
+
+    tr:last-child {
+      padding: 0;
+    }
+
+    #articleTitle {
+      width: 100%;
+    }
+
+    #articleNumber {
+      display: block;
+      width: 30px;
+    }
+
+    input {
+      width: 100%;
+    }
+    
+    textarea {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="total">
+    <div id="top">
+      <ul>
+        <li>
+          <a href="./page20.html">회원가입</a>
+        </li>
+        <li>
+          <a href="./page10.html">제품정보</a>
+        </li>
+        <li>
+          <a href="./page30.html">게시판</a>
+        </li>
+        <li>
+          <a href="./page40.html">장바구니</a>
+        </li>
+      </ul>
+      <div id="top2">
+        <p>장바구니 부분</p>
+      </div>
+    </div>
+    <div id="center">
+      <table border="1">
+        <tr>
+          <td id="articleNumber">번호</td>
+          <td id="articleTitle">제목</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><a href="javascript:void(0)">제목 1</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="javascript:void(0)">제목 2</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="javascript:void(0)">제목 3</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="javascript:void(0)">제목 4</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="javascript:void(0)">제목 5</a></td>
+        </tr>
+      </table>
+      <table border="1">
+        <tr>
+          <td>항목</td>
+          <td>입력</td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td><input type="text" placeholder="제목을 입력하세요." autofocus></td>
+        </tr>
+        <tr>
+          <td>내용</td>
+          <td><textarea cols="80" rows="18" placeholder="내용을 입력하세요."></textarea></td>
+        </tr>
+        <tr>
+          <td>작성자</td>
+          <td><input type="text" placeholder="작성자를 입력하세요."></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="글쓰기 완료">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

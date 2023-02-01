@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page7</title>
+</head>
+<body>
+  <script>
+    let width = parseFloat(prompt("가로 길이를 입력하세요."));
+    let height = parseFloat(prompt("세로 길이를 입력하세요."));
+    let square = width * height;
+    alert("사각형의 면적 : " + square.toFixed(1));
+
+    let coffeePrice = parseInt(prompt("개당 커피의 가격을 입력하세요."));
+    let buyCount = parseInt(prompt("커피 구매 갯수를 입력하세요."));
+    let coffeeTotal = coffeePrice * buyCount;
+    alert("커피의 전체 결제금액 : " + coffeeTotal);
+
+    let applePrice = 2000;
+    let appleCount = 3;
+    let appleTotal = applePrice * appleCount;
+    let pearPrice = 3000;
+    let pearCount = 2;
+    let pearTotal = pearPrice * pearCount;
+    let fruitTotal = appleTotal + pearTotal;
+    alert("과일의 전체 결제금액 : " + fruitTotal);
+
+    let yestTemper = 25;
+    let todayTemper = 10;
+    let averTemper = (yestTemper + todayTemper) / 2;
+    alert("어제와 오늘 온도의 평균 : " + averTemper);
+  </script>
+</body>
+</html>
