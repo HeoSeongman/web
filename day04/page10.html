@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page10</title>
+  <script>
+
+    function checkLength() {
+      let resultElem = document.getElementById("idResult");
+
+      if (document.getElementById("ID").value.length < 5) {
+        resultElem.textContent = "글자 수가 5글자 미만입니다.";
+        return false;
+      } else {
+        resultElem.textContent = "글자 수가 5글자 이상입니다.";
+        return true;
+      }
+    }
+
+    function checkPassword() {
+      let PWResult = document.getElementById("PWResult");
+
+      if (document.getElementById("PW1").value == document.getElementById("PW2").value) {
+        PWResult.textContent = "비밀번호가 동일합니다.";
+        return true;
+      } else {
+        PWResult.textContent = "비밀번호가 동일하지 않습니다."
+        return false;
+      }
+    }
+
+    function tryLogin() {
+      let loginResult = document.getElementById("loginResult");
+      let loginImg = document.getElementById("loginImg");
+      
+      if (checkLength() && checkPassword()) {
+        loginResult.textContent = "일치!!!";
+        loginResult.setAttribute("style", "color : blue; font-size : 50px;");
+        loginImg.setAttribute("src", "./img/ok.jpg");
+      } else {
+        loginResult.textContent = "불일치!!!";
+        loginResult.setAttribute("style", "color : red; font-size : 50px;");
+        loginImg.setAttribute("src", "./img/no.png");
+      }
+    }
+
+  </script>
+</head>
+<body>
+
+  <span>아이디 : 
+    <input type="text" placeholder="아이디를 입력하세요." id="ID">
+    <button onclick="checkLength()">글자 수 확인</button>
+    <span id="idResult"></span>
+  </span>
+  <br>
+
+  <span>비밀번호 : <input type="password" placeholder="비밀번호를 입력하세요." id="PW1"></span>
+  <br>
+
+  <span>비밀번호 확인 : 
+    <input type="password" placeholder="비밀번호를 입력하세요." id="PW2">
+    <button onclick="checkPassword()">비밀번호 확인</button>
+    <span id="PWResult"></span>
+  </span>
+  <br>
+
+  <button onclick="tryLogin()">로그인처리</button>
+  <hr color="yellowgreen">
+
+  <span id="loginResult"></span>
+  <img id="loginImg">
+
+</body>
+</html>

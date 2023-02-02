@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page8</title>
+  <script src="./out2.js"></script>
+</head>
+<body>
+  
+  <script>
+    // 1
+    for (let i = 0; i < 3; i++) {
+      document.write("@@@<br>");
+      alert("@@@");
+    }
+
+    // 2
+    let siteName = prompt("당신이 주로 가는 포털사이트를 입력하세요.");
+    let siteAddress;
+    if (siteName == "네이버") {
+      siteAddress = "https://www.naver.com";
+    } else if (siteName == "다음") {
+      siteAddress = "https://www.daum.net";
+    } else {
+      siteAddress = "https://www.google.com";
+    }
+    // location.href = siteAddress;
+    window.open(siteAddress, "_blank");
+
+    // 3
+    travel();
+    rest();
+
+    // 4
+    if (confirm("당신은 자바 프로그래머인가요?")) {
+      alert("훌륭한 웹프로그래머이시군요!");
+    } else {
+      alert("다른 언어를 사용하시는군요!");
+    }
+
+    // 5
+    let coffee = parseInt(prompt("커피의 가격을 입력하세요."));
+    let coffeeCount = parseInt(prompt("얼마나 구매하실건가요?"));
+    if (coffee * coffeeCount >= 15000) {
+      alert("할인해드릴게요.");
+    } else {
+      alert("정가로 내셔야해요.");
+    }
+
+    // 6
+    let wantFood = prompt("먹고 싶은 음식이 있으신가요?");
+    let price = parseInt(prompt("그거 얼마인가요?"));
+    if (wantFood == "커피" && price < 5000) {
+      alert("그거 제가 살게요.");
+    } else {
+      alert("본인이 내세요. 좀 부담스럽네요.");
+    }
+
+    // 7
+    let answer = prompt("지금은 오전인가요? 오후인가요?");
+    let count, result;
+    if (answer == "오전") {
+      count = 3;
+      result = "굿모닝!";
+    } else if (answer == "오후") {
+      count = 5;
+      result = "굿애프터눈!";
+    } else {
+      count = 10;
+      result = "굿나잇!";
+    }
+
+    for (let i = 0; i < count; i++) {
+      document.write(result + "<br>");
+      // alert(result);
+    }
+  </script>
+</body>
+</html>
