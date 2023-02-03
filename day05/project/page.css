@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: crimson;
+}
+
+header div {
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+}
+
+header div button {
+  font-size: 25px;
+  margin: 0 30px;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  width: auto;
+}
+
+img {
+  width: 100px;
+}
+
+span {
+  font-size: 100px;
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+#LargeImage {
+  width: 500px;
+}

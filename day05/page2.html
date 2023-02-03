@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page1</title>
+  <script>
+
+    function tour() {
+      let inputTransValue = parseInt(document.getElementById("inputTransportation").value);
+      let payment, mode;
+      if (inputTransValue == 1) {
+        payment = "30,000";
+        mode = "비행기";
+      } else if (inputTransValue == 2) {
+        payment = "10,000";
+        mode = "버스";
+      } else {
+        payment = "50,000";
+        mode = "자가용";
+      }
+
+      document.getElementById("tourResult").textContent = 
+        "나는 " + document.getElementById("months").value + "월에 " + document.getElementById("wantToGo").value +
+        "으로 " + mode + "를 타고 여행을 갈거에요. 비용은 " + payment + "원이에요.";
+    }
+
+    function tourSelect() {
+      let selectTrans = document.getElementById("selectTransportation");
+      let selectTransValue = selectTrans.value;
+      let payment;
+      if (selectTransValue == 0) {
+        payment = "30,000";
+      } else if (selectTransValue == 1) {
+        payment = "10,000";
+      } else {
+        payment = "50,000";
+      }
+
+      document.getElementById("tourSelectResult").textContent = 
+        "나는 " + document.getElementById("selectMonths").value + "에 " + document.getElementById("wantToGo").value +
+        "으로 " + selectTrans.children[selectTransValue].text + "를 타고 여행을 갈거에요. 비용은 " + payment + "원이에요.";
+    }
+
+  </script>
+</head>
+<body>
+
+  <hr color="red">
+  <span>여행가고 싶은 곳 : <input type="text" value="부산" id="wantToGo"></span><br>
+  <span>몇 월에 갈까요? : <input type="text" value="1" id="months"></span><br>
+  <span>무얼 타고 갈까요? : 1) 비행기(30,000), 2) 버스(10,000), 3) 자가용(50,000)</span><br>
+
+  <input type="text" value="1" id="inputTransportation"><br>
+  <button onclick="tour()">여행 계획 버튼</button>
+
+  <hr color="blue">
+  <span id="tourResult"></span>
+
+  <hr color="red">
+  <span>여행가고 싶은 곳 : <input type="text" value="부산" id="wantToGo"></span>
+  <br>
+  <span>몇 월에 갈까요? : 
+    <select id="selectMonths"></select>
+  </span>
+  <br>
+  <span>무얼 타고 갈까요? : 
+    <select id="selectTransportation">
+      <option value="0">비행기</option>
+      <option value="1">버스</option>
+      <option value="2">자가용</option>
+    </select>
+  </span>
+  <br>
+
+  <button onclick="tourSelect()">여행 계획</button>
+
+  <hr color="blue">
+  <span id="tourSelectResult"></span>
+
+  <script>
+    let selectMonths = document.getElementById("selectMonths");
+    for (let i = 1; i <= 12; i++) {
+      let tempElem = document.createElement("option");
+      tempElem.setAttribute("value", i + "월");
+      tempElem.text = i + "월";
+      selectMonths.appendChild(tempElem);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page14</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+
+      $("#b1").click(function() {
+        $.ajax({
+          url: "./ok.html",
+          success: function(x) {
+            $("#d1").html(x);
+          }
+        })        
+      });
+
+      $("#b2").click(function() {
+        $.ajax({
+          url: "./weather.html",
+          success: function(x) {
+            $("#d2").html(x);
+          }
+        })        
+      });
+
+      $("#b3").click(function() {
+        $.ajax({
+          url: "./tour.html",
+          success: function(x) {
+            $("#d3").html(x);
+          }
+        })        
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <button id="b1">Ajax Test 받아오기</button>
+  <button id="b2">기상청 정보 받아오기</button>
+  <button id="b3">여행정보 받아오기</button>
+  <hr>
+
+  <div id="d1" style="width: 200px; height: 100px; background-color: lime;"></div>
+  <div id="d2" style="width: 200px; height: 100px; background-color: yellow;"></div>
+  <div id="d3" style="width: 200px; height: 100px; background-color: pink;"></div>
+  
+</body>
+</html>

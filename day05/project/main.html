@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화순위 및 극장 정보</title>
+  <link rel="stylesheet" href="./page.css">
+  <script>
+    
+    function showImage(num) {
+      let imgSrc;
+      switch(num) {
+        case 1: imgSrc = "./img/방탄소년단.jpg";
+        break;
+        case 2: imgSrc = "./img/아바타.jpg";
+        break;
+        case 3: imgSrc = "./img/슬램덩크.jpg";
+        break;
+        case 4: imgSrc = "./img/타이타닉.jpg";
+        break;
+        case 5: imgSrc = "./img/바빌론.jpg";
+        break;
+      }
+
+      document.getElementById("LargeImage").setAttribute("src", imgSrc);
+    }
+
+  </script>
+</head>
+<body>
+  
+  <header>
+    <div>
+      <button>영화</button>
+      <button>극장</button>
+      <button>예매</button>
+      <button>이벤트</button>
+    </div>
+  </header>
+
+  <h1>영화순위 </h1>
+
+  <!-- <div>
+    <img src="./img/방탄소년단-옛 투 컴 인 시네마.jpg" alt="방탄소년단">
+    <img src="./img/아바타-물의 길.jpg" alt="아바타 물의 길">
+    <img src="./img/더 퍼스트 슬램덩크.jpg" alt="슬램덩크">
+    <img src="./img/타이타닉.jpg" alt="타이타닉">
+    <img src="./img/바빌론.jpg" alt="바빌론">
+  </div> -->
+
+  <div>
+    <table>
+      <tr>
+        <td>순위</td>
+        <td>제목</td>
+        <td>평점</td>
+        <td>예매율</td>
+        <td>포스터 보기</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>방탄 소년단: 옛 투 컴 인 시네마</td>
+        <td>99%</td>
+        <td>예매율 28.1%</td>
+        <td>
+          <button onclick="showImage(1)">보기</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>아바타-물의 길</td>
+        <td>96%</td>
+        <td>예매율 22.1%</td>
+        <td>
+          <button onclick="showImage(2)">보기</button>
+        </td>      
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>더 퍼스트 슬램덩크</td>
+        <td>97%</td>
+        <td>예매율 13.3%</td>
+        <td>
+          <button onclick="showImage(3)">보기</button>
+        </td>      
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>타이타닉</td>
+        <td>99%</td>
+        <td>예매율 8.4%</td>
+        <td>
+          <button onclick="showImage(4)">보기</button>
+        </td>      
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>바빌론</td>
+        <td>85%</td>
+        <td>예매율 5.9%</td>
+        <td>
+          <button onclick="showImage(5)">보기</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <img id="LargeImage">
+
+</body>
+</html>
